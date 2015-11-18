@@ -1,0 +1,50 @@
+{
+    "fantacalcioApp": {
+        "giocatore" : {
+            "home": {
+                "title": "Rosa Giocatori",
+                "createLabel": "Aggiungi un giocatore",
+                "createOrEditLabel": "Crea o Modifica un giocatore"
+            },
+            "created": "Nuovo giocatore creato, id {{ param }}",
+            "updated": "Giocatore id {{ param }} modificato ",
+            "deleted": "Giocatore id {{ param }} cancelato",
+            "delete": {
+                "question": "Sei sicuro di voler cancellare il giocatore {{ id }}?"
+            },
+            "detail": {
+                "title": "Giocatore"
+            },
+            "codice": "Codice",
+            "nome": "Nome",
+            "nome_gazzetta": "Nome Gazzetta",
+            "ruolo": "Ruolo",
+            "presenze": "Presenze",
+            "cambio_in": "Cambi IN",
+            "cambio_out": "Cambi OUT",
+            "gol": "Gol",
+            "espulsioni": "Espulsioni",
+            "ammonizioni": "Ammonizioni",
+            "media_punti": "Media_punti",
+            "stato": "Stato",
+            "ultima_modifica": "Ultima_modifica",
+            "user": "User",
+            "breve" : {
+	            "codice": "Codice",
+	            "nome": "Nome",
+	            "nome_gazzetta": "Gazza",
+	            "ruolo": "R",
+	            "presenze": "P",
+	            "cambio_in": "IN",
+	            "cambio_out": "OUT",
+	            "gol": "Gol",
+	            "espulsioni": "E",
+	            "ammonizioni": "A",
+	            "media_punti": "MP",
+	            "stato": "Stato",
+	            "ultima_modifica": "Data",
+	            "user": "User"           
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="fantacalcioApp.formazione.detail.title">Formazione</span> {{formazione.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="fantacalcioApp.formazione.giornata">Giornata</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{formazione.giornata}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="fantacalcioApp.formazione.titolare">Titolare</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{formazione.titolare}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="fantacalcioApp.formazione.valutazione">Valutazione</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{formazione.valutazione}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="fantacalcioApp.formazione.giocatore">giocatore</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="giocatore.detail({id:formazione.giocatore.id})">{{formazione.giocatore.nome}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,49 @@
+<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="nav in" id="side-menu">
+            <sidebar-search></sidebar-search>
+            <li ui-sref-active="active">
+                <a ui-sref="giocatore"><i class="fa fa-table fa-fw"></i> Giocatori</a>
+            </li>
+            <li ng-class="{active: collapseVar==1}">{{dropDown}}
+                <a href="" ng-click="check(1)"><i class="fa fa-edit fa-fw"></i> <span translate="global.menu.entities.formazione">Formazione</span>
+                <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=1">
+                <!-- 4-3-3, 5-3-2, 4-4-2, 4-5-1, 5-4-1, 6-3-1, 3-4-3 -->
+                    <li ui-sref-active="active">
+                        <a ui-sref="fantaFormazione({id:433})">4-3-3</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="fantaFormazione({id:532})">5-3-2</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="fantaFormazione({id:442})">4-4-2</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="fantaFormazione({id:451})">4-5-1</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="fantaFormazione({id:541})">5-4-1</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="fantaFormazione({id:631})">6-3-1</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="fantaFormazione({id:343})">3-4-3</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li ng-class="{active: $state.includes('admin')}" has-authority="ROLE_ADMIN">
+                <a ui-sref="dashboard.chart"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span></span></a>
+            </li>
+            <li ng-class="{active: $state.includes('admin')}" has-authority="ROLE_ADMIN">
+                <a ui-sref="metrics"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+</div> 
+
+
+

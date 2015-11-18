@@ -1,0 +1,43 @@
+{
+    "fantacalcioApp": {
+        "fantaFormazione" : {
+            "home": {
+                "title": "Fanta Formazione",
+                "createLabel": "",
+                "createOrEditLabel": "",
+                "titolari" : "Titolari",
+                "panchina" : "Panchina"             
+            },
+            "created": "A new Formazione is created with identifier {{ param }}",
+            "updated": "A Formazione is updated with identifier {{ param }}",
+            "deleted": "A Formazione is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Formazione {{ id }}?"
+            },
+            "detail": {
+                "title": "Formazione"
+            },
+            "giornata": "Giornata",
+            "titolare": "Titolare",
+            "valutazione": "Valutazione",
+            "giocatore": "Giocatore",
+            "breve" : {
+	            "codice": "Codice",
+	            "nome": "Nome",
+	            "nome_gazzetta": "Nome Gazzetta",
+	            "ruolo": "Ruolo",
+	            "presenze": "P",
+	            "cambio_in": "IN",
+	            "cambio_out": "OUT",
+	            "gol": "Gol",
+	            "espulsioni": "E",
+	            "ammonizioni": "A",
+	            "media_punti": "Media Punti",
+	            "stato": "Stato",
+	            "ultima_modifica": "Data",
+	            "user": "User"           
+            }
+            
+        }
+    }
+}

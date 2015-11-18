@@ -1,0 +1,77 @@
+<div>
+    <!--  <h2 translate="fantacalcioApp.giocatore.home.title">Giocatores</h2> -->
+    
+    <div class="row">
+    <div class="col-lg-12">
+        <h1>Fanta Formazione {{modulo}}</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+    </div>
+    
+    
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+		        <h2 translate="fantacalcioApp.fantaFormazione.home.titolari">Titolari</h2>
+	    </div>
+    </div>
+    
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                	<th translate="global.field.id">ID</th>
+                    <th translate="fantacalcioApp.fantaFormazione.breve.ruolo">Ruolo</th>                    
+                    <th translate="fantacalcioApp.fantaFormazione.breve.codice">Codice</th>
+                    <th translate="fantacalcioApp.fantaFormazione.breve.nome_gazzetta">Nome_gazzetta</th>
+                    <th translate="fantacalcioApp.fantaFormazione.breve.stato">Stato</th>
+                    <th translate="fantacalcioApp.fantaFormazione.breve.media_punti">Media_punti</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="giocatore in fantaFormazione.titolari" 
+                ng-class="{'success': giocatore.stato == 'TITOLARE', 'warning': giocatore.stato == 'PANCHINA', 'danger': giocatore.stato == 'INDISPONIBILE'}">
+                    <td><a ui-sref="giocatore.detail({id:giocatore.id})">{{giocatore.id}}</a></td>
+                    <td>{{giocatore.ruolo}}</td>
+                    <td>{{giocatore.codice}}</td>
+                    <td>{{giocatore.nome_gazzetta}}</td>                    
+                    <td>{{giocatore.stato}}</td>
+                    <td>{{giocatore.media_punti}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <div class="row">
+        	<h2 translate="fantacalcioApp.fantaFormazione.home.panchina">Panchina</h2>
+        </div>
+    </div>    
+    
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                	<th translate="global.field.id">ID</th>
+                    <th translate="fantacalcioApp.fantaFormazione.breve.ruolo">Ruolo</th>                    
+                    <th translate="fantacalcioApp.fantaFormazione.breve.codice">Codice</th>
+                    <th translate="fantacalcioApp.fantaFormazione.breve.nome_gazzetta">Nome_gazzetta</th>
+                    <th translate="fantacalcioApp.fantaFormazione.breve.stato">Stato</th>
+                    <th translate="fantacalcioApp.fantaFormazione.breve.media_punti">Media_punti</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="giocatore in fantaFormazione.panchina" 
+                ng-class="{'success': giocatore.stato == 'TITOLARE', 'warning': giocatore.stato == 'PANCHINA', 'danger': giocatore.stato == 'INDISPONIBILE'}">
+                    <td><a ui-sref="giocatore.detail({id:giocatore.id})">{{giocatore.id}}</a></td>
+                    <td>{{giocatore.ruolo}}</td>
+                    <td>{{giocatore.codice}}</td>
+                    <td>{{giocatore.nome_gazzetta}}</td>                    
+                    <td>{{giocatore.stato}}</td>
+                    <td>{{giocatore.media_punti}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>

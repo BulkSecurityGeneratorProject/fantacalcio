@@ -1,0 +1,22 @@
+{
+    "fantacalcioApp": {
+        "formazione" : {
+            "home": {
+                "title": "Formaziones",
+                "createLabel": "Créer un nouveau Formazione",
+                "createOrEditLabel": "Créer ou éditer un Formazione"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Formazione {{ id }} ?"
+            },
+            "detail": {
+                "title": "Formazione"
+            },
+            "giornata": "Giornata",
+            "titolare": "Titolare",
+            "valutazione": "Valutazione",
+            "giocatore": "Giocatore"
+        }
+    }
+}
+

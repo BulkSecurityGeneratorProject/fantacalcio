@@ -1,0 +1,32 @@
+{
+    "fantacalcioApp": {
+        "giocatore" : {
+            "home": {
+                "title": "Giocatores",
+                "createLabel": "Créer un nouveau Giocatore",
+                "createOrEditLabel": "Créer ou éditer un Giocatore"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Giocatore {{ id }} ?"
+            },
+            "detail": {
+                "title": "Giocatore"
+            },
+            "codice": "Codice",
+            "nome": "Nome",
+            "nome_gazzetta": "Nome_gazzetta",
+            "ruolo": "Ruolo",
+            "presenze": "Presenze",
+            "cambio_in": "Cambio_in",
+            "cambio_out": "Cambio_out",
+            "gol": "Gol",
+            "espulsioni": "Espulsioni",
+            "ammonizioni": "Ammonizioni",
+            "media_punti": "Media_punti",
+            "stato": "Stato",
+            "ultima_modifica": "Ultima_modifica",
+            "user": "User"
+        }
+    }
+}
+

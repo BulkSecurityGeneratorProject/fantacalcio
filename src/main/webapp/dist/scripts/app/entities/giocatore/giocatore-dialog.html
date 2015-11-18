@@ -1,0 +1,132 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myGiocatoreLabel" translate="fantacalcioApp.giocatore.home.createOrEditLabel">Create or edit a Giocatore</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="giocatore.id" readonly>
+        </div>
+        <div class="form-group">
+            <label translate="fantacalcioApp.giocatore.codice" for="field_codice">Codice</label>
+            <input type="text" class="form-control" name="codice" id="field_codice"
+                    ng-model="giocatore.codice"
+                    required>
+            <div ng-show="editForm.codice.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.codice.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="fantacalcioApp.giocatore.nome" for="field_nome">Nome</label>
+            <input type="text" class="form-control" name="nome" id="field_nome"
+                    ng-model="giocatore.nome"
+                    required>
+            <div ng-show="editForm.nome.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nome.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="fantacalcioApp.giocatore.nome_gazzetta" for="field_nome_gazzetta">Nome_gazzetta</label>
+            <input type="text" class="form-control" name="nome_gazzetta" id="field_nome_gazzetta"
+                    ng-model="giocatore.nome_gazzetta"
+                    required>
+            <div ng-show="editForm.nome_gazzetta.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nome_gazzetta.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="fantacalcioApp.giocatore.ruolo" for="field_ruolo">Ruolo</label>
+            <input type="text" class="form-control" name="ruolo" id="field_ruolo"
+                    ng-model="giocatore.ruolo"
+                    required ng-pattern="/^[PDCA]/">
+            <div ng-show="editForm.ruolo.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.ruolo.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.ruolo.$error.pattern" translate="entity.validation.pattern" translate-value-pattern="^[PDCA]">
+                    This field should follow pattern "^[PDCA]".
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="fantacalcioApp.giocatore.presenze" for="field_presenze">Presenze</label>
+            <input type="number" class="form-control" name="presenze" id="field_presenze"
+                    ng-model="giocatore.presenze"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="fantacalcioApp.giocatore.cambio_in" for="field_cambio_in">Cambio_in</label>
+            <input type="number" class="form-control" name="cambio_in" id="field_cambio_in"
+                    ng-model="giocatore.cambio_in"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="fantacalcioApp.giocatore.cambio_out" for="field_cambio_out">Cambio_out</label>
+            <input type="number" class="form-control" name="cambio_out" id="field_cambio_out"
+                    ng-model="giocatore.cambio_out"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="fantacalcioApp.giocatore.gol" for="field_gol">Gol</label>
+            <input type="number" class="form-control" name="gol" id="field_gol"
+                    ng-model="giocatore.gol"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="fantacalcioApp.giocatore.espulsioni" for="field_espulsioni">Espulsioni</label>
+            <input type="number" class="form-control" name="espulsioni" id="field_espulsioni"
+                    ng-model="giocatore.espulsioni"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="fantacalcioApp.giocatore.ammonizioni" for="field_ammonizioni">Ammonizioni</label>
+            <input type="number" class="form-control" name="ammonizioni" id="field_ammonizioni"
+                    ng-model="giocatore.ammonizioni"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="fantacalcioApp.giocatore.media_punti" for="field_media_punti">Media_punti</label>
+            <input type="number" class="form-control" name="media_punti" id="field_media_punti"
+                    ng-model="giocatore.media_punti"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="fantacalcioApp.giocatore.stato" for="field_stato">Stato</label>
+            <input type="text" class="form-control" name="stato" id="field_stato"
+                    ng-model="giocatore.stato"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="fantacalcioApp.giocatore.ultima_modifica" for="field_ultima_modifica">Ultima_modifica</label>
+            <input type="datetime-local" class="form-control" name="ultima_modifica" id="field_ultima_modifica"
+                    ng-model="giocatore.ultima_modifica" ng-model-options="{timezone: 'UTC'}"
+                    >
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
