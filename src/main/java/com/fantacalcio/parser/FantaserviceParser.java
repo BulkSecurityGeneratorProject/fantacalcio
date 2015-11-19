@@ -31,7 +31,7 @@ public class FantaserviceParser {
     private GiocatoreRepository giocatoreRepository;
 	
 	
-	@Scheduled(initialDelay=3600000, fixedDelay=3600000)
+	@Scheduled(initialDelay=60000, fixedDelay=86400000)
 	public void loadData() {
 		
 		List<Giocatore> players = giocatoreRepository.findAll();
