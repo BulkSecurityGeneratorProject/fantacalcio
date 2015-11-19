@@ -37,7 +37,9 @@
         		<a class="navbar-brand" href="#/"><span translate="global.title">jhipster</span> <span class="navbar-version">v{{VERSION}}</span></a>
     		</div>
     	<!-- /.navbar-header -->
-    	<div ui-view="header-notification" ng-cloak=""></div>
+    	
+    	<ui-view name="header-notification" ng-cloak=""></ui-view>
+    	
         <div ui-view="sidebar" ng-cloak=""></div>
     	
 		</nav>
@@ -48,7 +50,7 @@
                 
          </div>
          
-         <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
+         <!--  <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>  -->
         
         </div>
         

@@ -73,7 +73,7 @@ body {
 }
 
 .navbar-top-links .dropdown-tasks {
-    margin-left: -59px;
+/*    margin-left: -59px; */
 }
 
 .navbar-top-links .dropdown-alerts {
@@ -81,7 +81,7 @@ body {
 }
 
 .navbar-top-links .dropdown-user {
-    right: 0;
+/*  right: 0; */
     left: auto;
 }
 
