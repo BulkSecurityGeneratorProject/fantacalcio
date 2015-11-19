@@ -25,6 +25,6 @@ nohup java -Xms384m -Xmx384m \
      --server.address=${OPENSHIFT_DIY_IP} \
      --server.port=${OPENSHIFT_DIY_PORT} \
      --spring.datasource.driver-class-name=org.h2.jdbcx.JdbcDataSource \
-     --spring.datasource.url=jdbc:h2:${OPENSHIFT_DATA_DIR}\fantadb;DB_CLOSE_DELAY=-1 \
+     --spring.datasource.url=jdbc:h2:${OPENSHIFT_DATA_DIR}\fantadb \
      --spring.datasource.username=sa \
      --spring.datasource.password=t > ${OPENSHIFT_DIY_LOG_DIR}fantacalcio.log 2>&1 &
