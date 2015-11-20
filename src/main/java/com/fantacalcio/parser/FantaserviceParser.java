@@ -66,7 +66,7 @@ public class FantaserviceParser {
 				}
 				
 				try {
-					Thread.currentThread().sleep(1000);
+					Thread.currentThread().sleep(2000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
