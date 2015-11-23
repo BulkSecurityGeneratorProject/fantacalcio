@@ -5,7 +5,7 @@ angular.module('fantacalcioApp')
         $scope.giocatores = [];
         $scope.page = 0;
         $scope.loadAll = function() {
-            Giocatore.query({page: $scope.page, size: 20}, function(result, headers) {
+            Giocatore.query({page: $scope.page, size: 25}, function(result, headers) {
                 $scope.links = ParseLinks.parse(headers('link'));
                 $scope.giocatores = result;
             });

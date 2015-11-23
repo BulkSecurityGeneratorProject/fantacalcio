@@ -80,6 +80,10 @@ public class DatabaseConfiguration  {
         if (metricRegistry != null) {
             config.setMetricRegistry(metricRegistry);
         }
+        
+        
+        System.out.println("########" + dataSourceProperties.getUrl() + "################## " + config.getDataSourceClassName() );
+        
         return new HikariDataSource(config);
     }
 

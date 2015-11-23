@@ -14,14 +14,14 @@ spring:
     profiles:
         active: prod
     datasource:
-        driver-class-name: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
-        url: jdbc:mysql://localhost:3306/fantacalcio?useUnicode=true&characterEncoding=utf8
+        driver-class-name: org.h2.jdbcx.JdbcDataSource
+        url: jdbc:h2:C:/temp/jhipster;DB_CLOSE_DELAY=-1
         name: 
-        username: root
-        password:
+        username:  
+        password: 
     jpa:
-        database-platform: org.hibernate.dialect.MySQLInnoDBDialect
-        database: MYSQL
+        database-platform: com.fantacalcio.domain.util.FixedH2Dialect
+        database: H2
         show_sql: false
         properties:
             hibernate.cache.use_second_level_cache: true
