@@ -19,7 +19,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 #     --spring.datasource.password=${OPENSHIFT_MYSQL_DB_PASSWORD} > ${OPENSHIFT_DIY_LOG_DIR}fantacalcio.log 2>&1 &
 
 # Tolto opzione java server e utilizzo profilo dev
-nohup java -Xms384m -Xmx384m \
+nohup java -Xms384m -Xmx384m -Dfile.encoding=UTF8 \
      -jar ${jar} \
      --spring.profiles.active=dev \
      --server.address=${OPENSHIFT_DIY_IP} \
