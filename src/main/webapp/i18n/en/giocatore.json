@@ -28,7 +28,23 @@
             "media_punti": "Media_punti",
             "stato": "Stato",
             "ultima_modifica": "Ultima_modifica",
-            "user": "User"
+            "user": "User",
+            "breve" : {
+	            "codice": "Codice",
+	            "nome": "Nome",
+	            "nome_gazzetta": "Gazza",
+	            "ruolo": "R",
+	            "presenze": "P",
+	            "cambio_in": "IN",
+	            "cambio_out": "OUT",
+	            "gol": "Gol",
+	            "espulsioni": "E",
+	            "ammonizioni": "A",
+	            "media_punti": "MP",
+	            "stato": "Stato",
+	            "ultima_modifica": "Data",
+	            "user": "User"           
+            }            
         }
     }
 }

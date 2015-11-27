@@ -1,7 +1,7 @@
 {
     "main": {
         "title": "Fantacalcio 2015/16!",
-        "subtitle": "Questa è la tua home page",
+        "subtitle": "Gestisci la tua rosa e genera le formazioni",
         "logged": {
             "message": "Loggato come \"{{username}}\"."
         },

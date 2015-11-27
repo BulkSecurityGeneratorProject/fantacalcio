@@ -45,7 +45,7 @@
         },
         "messages": {
             "info": {
-                "authenticated": "Se si vuole <a class=\"alert-link\" href=\"#/login\"> avviare una sessione</a>",
+                "authenticated": "Per accedere <a class=\"alert-link\" href=\"#/login\">Login</a>",
                 "register": "Non hai ancora un account <a class=\"alert-link\" href=\"#/register\">Crea un account?</a>"
             },
             "error": {
