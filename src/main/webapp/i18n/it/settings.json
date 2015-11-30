@@ -1,29 +1,30 @@
 {
     "settings": {
-        "title": "Ajustes del usuario para [<b>{{username}}</b>]",
+        "title": "Impostazioni per l'utente [<b>{{username}}</b>]",
         "form": {
-            "firstname": "Nombre",
-            "firstname.placeholder": "Su nombre",
-            "lastname": "Apellido",
-            "lastname.placeholder": "Su Apellido",
-            "button": "Guardar"
+            "firstname": "Nome",
+            "firstname.placeholder": "Il tuo nome",
+            "lastname": "Cognome",
+            "lastname.placeholder": "Il tuo cognome",
+            "language" : "Lingua",
+            "button": "Modifica"
         },
         "messages": {
             "error": {
-                "fail": "<strong>¡Ha ocurrido un error!</strong> Ajustes no pudieron guardarse.",
+                "fail": "<strong>An error has occurred!</strong> Settings could not be saved.",
                 "emailexists": "<strong>E-mail is already in use!</strong> Please choose another one."
             },
-            "success": "<strong>¡Ajustes guardados!</strong>",
+            "success": "<strong>Modifiche salvate</strong>",
             "validate": {
                 "firstname": {
-                    "required": "Se requiere que ingrese su nombre.",
-                    "minlength": "Se requiere que su nombre tenga por lo menos 1 carácter",
-                    "maxlength": "Su nombre no puede tener mas de 50 carácteres"
+                    "required": "Il campo nome è obbligatorio",
+                    "minlength": "Campo nome min 1 carattere",
+                    "maxlength": "Campo nome max 50 carattere"
                 },
                 "lastname": {
-                    "required": "Se requiere que ingrese su apellido.",
-                    "minlength": "Se requiere que su apellido tenga por lo menos 1 carácter",
-                    "maxlength": "Su apellido no puede tener mas de 50 carácteres"
+                    "required": "Il campo cognome è obbligatorio",
+                    "minlength": "Campo cognome min 1 carattere",
+                    "maxlength": "Campo cognome max 50 caratteri"
                 }
             }
         }

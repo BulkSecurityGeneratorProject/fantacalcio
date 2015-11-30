@@ -1,7 +1,10 @@
 <script>
 
 $('.nav a').on('click', function(){
-    $('.navbar-toggle').click() //bootstrap 3.x by Richard
+	width = $(window).width() > 0 ? $(window).innerWidth() : screen.width;
+    if (width < 768) { // check value on sb-admin-2.js
+    	$('.navbar-toggle').click();
+    }
 });
 	
 </script>
@@ -43,6 +46,12 @@ $('.nav a').on('click', function(){
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
+            <li ui-sref-active="active">
+                <a href="https://drive.google.com/folderview?id=0Bx8IANQs8X8sb1VwSGduUER1X0U&usp=sharing"><i class="fa fa-external-link fa-fw"></i> Cartella Google Drive</a>                
+            </li>            
+            <li ui-sref-active="active">
+                <a href="http://www.webalice.it/luca.storari/fantacalcio/index.htm"><i class="fa fa-external-link fa-fw"></i> Federazione</a>                
+            </li>            
             <li ng-class="{active: $state.includes('admin')}" has-authority="ROLE_ADMIN">
                 <a ui-sref="dashboard.chart"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span></span></a>
             </li>
