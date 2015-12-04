@@ -3,7 +3,7 @@
         "title": "Fantacalcio 2015/16!",
         "subtitle": "Gestisci la tua rosa e genera le formazioni",
         "logged": {
-            "message": "Loggato come \"{{username}}\"."
+            "message": "Utente \"{{username}}\".  <br/><br/> Statistiche da <a href=\"http://www.fantacalcioservice.it\">Fantacalcioservice</a><br/>Titolari da <a href=\"http://www.gazzetta.it/Calcio/prob_form/\">Gazzetta.it</a>"
         },
         "question": "Se avete domande su Fantacalcio:",
         "link": {

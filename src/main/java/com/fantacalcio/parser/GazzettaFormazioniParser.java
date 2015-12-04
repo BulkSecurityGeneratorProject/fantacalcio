@@ -37,6 +37,11 @@ public class GazzettaFormazioniParser {
 	@Scheduled(initialDelay=1800000, fixedDelay=3600000)
 	public void loadData() throws IOException {
 		
+		// clear lists
+		titolari.clear();
+		panchina.clear();
+		infortunati.clear();
+		
 		// http://www.fantacalcioservice.it/it/seriea/37787/calciatore/j._murillo/statistiche/
 		String url = "http://www.gazzetta.it/Calcio/prob_form";
 		
