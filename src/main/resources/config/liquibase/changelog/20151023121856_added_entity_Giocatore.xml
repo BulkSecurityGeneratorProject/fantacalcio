@@ -59,5 +59,40 @@
                   separator=";"
                   tableName="giocatore"/>                                 
 
+		<loadData encoding="UTF-8"
+                  file="config/liquibase/a-pugliese.csv"
+                  separator=";"
+                  tableName="giocatore"/>                                 
+
+		<loadData encoding="UTF-8"
+                  file="config/liquibase/ac-pizzo.csv"
+                  separator=";"
+                  tableName="giocatore"/>        
+                                           
+		<loadData encoding="UTF-8"
+                  file="config/liquibase/quelle-che.csv"
+                  separator=";"
+                  tableName="giocatore"/>                                 
+
+		<loadData encoding="UTF-8"
+                  file="config/liquibase/rosabaya.csv"
+                  separator=";"
+                  tableName="giocatore"/>                                 
+                                           
+		<loadData encoding="UTF-8"
+                  file="config/liquibase/sciabola.csv"
+                  separator=";"
+                  tableName="giocatore"/>                 
+                                  
+		<loadData encoding="UTF-8"
+                  file="config/liquibase/star-trek.csv"
+                  separator=";"
+                  tableName="giocatore"/>                                 
+                                  
+		<loadData encoding="UTF-8"
+                  file="config/liquibase/vr-mattock.csv"
+                  separator=";"
+                  tableName="giocatore"/>                                 
+
     </changeSet>
 </databaseChangeLog>

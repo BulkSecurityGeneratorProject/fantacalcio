@@ -1,7 +1,12 @@
 id;login;PASSWORD;first_name;last_name;email;activated;lang_key;created_by
-1;system;$2a$10$mE.qmcV0mFU5NcKh73TZx.z4ueI/.bDWbj0T1BYyqP481kGGarKLG;System;System;system@localhost;true;en;system
-2;anonymousUser;$2a$10$j8S5d7Sr7.8VTOYNviDPOeWX8KcYILUVJBsYV83Y5NtECayypx9lO;Anonymous;User;anonymous@localhost;true;en;system
-3;admin;$2a$10$gSAhZrxMllrbgj/kkK9UceBPpChGWJA7SYIb1Mqo.n5aNLq1/oRrC;Administrator;Administrator;admin@localhost;true;en;system
-4;user;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;User;User;user@localhost;true;en;system
-5;andrea;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;Andrea;Ghelfi;andrea@localhost;true;it;system
+1;system;$2a$10$7HO5jP87NONzNtru3k9qy.yUvMjbvXreugQPmlgvR6zjdKkmrU5PW;System;System;system@localhost;true;en;system
+3;admin;$2a$10$7HO5jP87NONzNtru3k9qy.yUvMjbvXreugQPmlgvR6zjdKkmrU5PW;Administrator;Administrator;admin@localhost;true;en;system
+5;ateam;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;A;Team;ateam@localhost;true;it;system
 6;luca;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;Luca;Finicelli;luca@localhost;true;it;system
+10;apugliese;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;Atletico;Pugliese;apugliese@localhost;true;it;system
+11;acpizzo;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;AC;Pizzo;acpizzo@localhost;true;it;system
+12;quelleche;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;Quelle;Che;quelleche@localhost;true;it;system
+13;rosabaya;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;S;Rosabaya;rosabaya@localhost;true;it;system
+14;sciabola;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;S;Sciabola;sciabola@localhost;true;it;system
+15;startrek;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;Star;Trek;startrek@localhost;true;it;system
+16;vrmattock;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;VR;Mattock;vrmattock@localhost;true;it;system
