@@ -34,7 +34,8 @@ public class GazzettaFormazioniParser {
 	@Inject
     private GiocatoreRepository giocatoreRepository;
 	
-	@Scheduled(initialDelay=1800000, fixedDelay=3600000)
+	//@Scheduled(initialDelay=1800000, fixedDelay=3600000)
+	@Scheduled(initialDelay=3600000, fixedDelay=3600000)
 	public void loadData() throws IOException {
 		
 		// clear lists

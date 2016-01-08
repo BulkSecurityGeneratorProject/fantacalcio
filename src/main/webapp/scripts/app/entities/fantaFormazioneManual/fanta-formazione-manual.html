@@ -1,0 +1,138 @@
+
+<script>
+var clipboard = new Clipboard('.btn');
+clipboard.on('success', function(e) {
+    console.log(e);
+});
+clipboard.on('error', function(e) {
+    console.log(e);
+});
+</script>
+
+<div>
+	<!--  <h2 translate="fantacalcioApp.giocatore.home.title">Giocatores</h2> -->
+
+	<div class="row">
+		<div class="col-lg-10">
+			<center>
+				<h2>Fanta Formazione {{difensori}}-{{centrocampisti}}-{{attacanti}}</h2>
+			</center>
+		</div>
+			
+		   <div class="col-lg-10">
+		       <div class="row">
+		           <div class="col-md-4">
+		               <button class="btn btn-primary" data-clipboard-action="copy" data-clipboard-text="{{clipboard}}">
+		                   <span class="fa fa-copy"></span> <span>Copia formazione</span>
+		               </button>
+		           </div>
+		           <div class="col-md-4 alert-danger" ng-if="errorMessage != ''">
+		           <b>{{errorMessage}}</b>
+					</div>
+		       </div>
+		   </div>
+		   <div class="col-lg-10">
+		       <div class="row"><p>&nbsp;</p></div>
+		   </div>		   
+							
+		<!-- /.col-lg-12 -->
+
+		<div class="col-lg-10 simpleDemo row">
+		
+		<div class="col-md-5">
+		<div class="row">
+			<div ng-repeat="(listName, list) in models.lists">
+			<!--   -->
+				<div ng-if="listName !== 'Titolari' && listName !== 'Panchina'" class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">{{listName}}</h3>
+					</div>
+					<div class="panel-body">
+						<!-- The dnd-list directive allows to drop elements into it.
+	     					The dropped data will be added to the referenced list -->
+						<ul dnd-list="list"
+						    dnd-allowed-types="models.allowedTypes[listName]"
+							dnd-external-sources="false"
+							dnd-dragover="dragoverCallback(event, index, external, listName)"
+   							dnd-drop="dropCallback(event, index, item, external, type, listName)">
+							<!-- The dnd-draggable directive makes an element draggable and will
+	         					transfer the object that was assigned to it. If an element was
+	         					dragged away, you have to remove it from the original list
+	         					yourself using the dnd-moved attribute -->
+							<li ng-repeat="item in list" 
+								dnd-draggable="item"
+								dnd-type="listName"
+								dnd-moved="list.splice($index, 1); updateFormazione()" 
+								dnd-effect-allowed="move"
+								dnd-selected="models.selected = item"
+								ng-class="{'selected': models.selected === item}"
+								class="background-{{item.stato}}">
+								{{item.nome_gazzetta}} {{item.stato | lowercase}} ({{item.media_punti}})
+							<li class="dndPlaceholder">
+       							Drop any player here
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+				
+		</div>
+		</div>
+
+		<div class="col-md-5">
+		<div ng-repeat="(listName, list) in models.lists">
+		
+		<!--   -->
+			<div ng-if="listName === 'Titolari' || listName === 'Panchina'" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">{{listName}}</h3>
+				</div>
+				<div class="panel-body">
+					<!-- The dnd-list directive allows to drop elements into it.
+     					The dropped data will be added to the referenced list -->
+					<ul dnd-list="list"
+						dnd-allowed-types=""
+						dnd-external-sources="false"
+						dnd-dragover="dragoverCallback(event, index, external, listName)"
+  							dnd-drop="dropCallback(event, index, item, external, type, listName)">
+						<!-- The dnd-draggable directive makes an element draggable and will
+         					transfer the object that was assigned to it. If an element was
+         					dragged away, you have to remove it from the original list
+         					yourself using the dnd-moved attribute -->
+						<li ng-repeat="item in list" 
+							dnd-draggable="item"
+							dnd-type="item.ruolo"
+							dnd-moved="list.splice($index, 1); updateFormazione(item, listName)" 
+							dnd-effect-allowed="move"
+							dnd-selected="models.selected = item"
+							ng-class="{'selected': models.selected === item}"
+							class="background-{{item.stato}}">
+							<label id="bar">{{item.ruolo}} {{item.codice}} {{item.nome_gazzetta}} ({{item.media_punti}})</label>
+						</li>
+						
+						<li class="dndPlaceholder">
+      							Drop any player here
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+		</div>
+		
+		<!--  
+ 		<div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Modulo utilizzato</h3>
+            </div>
+            <div class="panel-body">
+                <pre class="code">{{portieri}}-{{difensori}}-{{centrocampisti}}-{{attacanti}}</pre>
+            </div>
+        </div>
+        <button class="btn" data-clipboard-action="copy" data-clipboard-text="{{clipboard}}">Copia formazione</button>
+    	</div>		
+		-->
+		
+	</div>

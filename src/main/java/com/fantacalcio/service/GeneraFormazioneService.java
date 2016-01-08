@@ -54,9 +54,15 @@ public class GeneraFormazioneService {
  		int[] modulo = new int[4];
  		modulo[0] = 1; //Portiere
  		
- 		String moduloStr = "" + codiceModulo;
- 		for ( int i=0; i<3; i++) {
- 			modulo[i+1] = Integer.parseInt(moduloStr.substring(i,i+1));
+ 		if ( codiceModulo != 0 ) {
+	 		String moduloStr = "" + codiceModulo;
+	 		for ( int i=0; i<3; i++) {
+	 			modulo[i+1] = Integer.parseInt(moduloStr.substring(i,i+1));
+	 		}
+ 		} else {
+ 			// Formazione manuale azzero i moduli
+ 			modulo[0] = modulo[1] = modulo[2] = modulo[3] = 0;
+ 			riserve[0] = riserve[1] = riserve[2] = riserve[3] = 0;  
  		}
  		
  		log.info("Use modulo: " + modulo[0] + "-" + modulo[1] + "-" + modulo[2] + "-" + modulo[3]);
@@ -80,9 +86,34 @@ public class GeneraFormazioneService {
  				p.add(listaPerRuolo.get(ruoli[i]).get(modulo[i] + j));
  			}
  		}
+ 		
+ 		ArrayList<Giocatore> portieri = new ArrayList<Giocatore>();
+ 		for ( int j = (modulo[0] + riserve[0]) ; j < listaPerRuolo.get(Ruolo.P).size(); j++) {
+ 			portieri.add(listaPerRuolo.get(Ruolo.P).get(j));
+ 		}
+ 		
+ 		ArrayList<Giocatore> difensori = new ArrayList<Giocatore>();
+ 		for ( int j = (modulo[1] + riserve[1]) ; j < listaPerRuolo.get(Ruolo.D).size(); j++) {
+ 			difensori.add(listaPerRuolo.get(Ruolo.D).get(j));
+ 		}
+ 		
+ 		ArrayList<Giocatore> centrocampisti = new ArrayList<Giocatore>();
+ 		for ( int j = (modulo[2] + riserve[2]) ; j < listaPerRuolo.get(Ruolo.C).size(); j++) {
+ 			centrocampisti.add(listaPerRuolo.get(Ruolo.C).get(j));
+ 		}
+ 		
+ 		ArrayList<Giocatore> attaccanti = new ArrayList<Giocatore>();
+ 		for ( int j = (modulo[3] + riserve[3]) ; j < listaPerRuolo.get(Ruolo.A).size(); j++) {
+ 			attaccanti.add(listaPerRuolo.get(Ruolo.A).get(j));
+ 		}
+ 		
     	
  		fantaFormazione.setTitolari(t);
  		fantaFormazione.setPanchina(p);
+ 		fantaFormazione.setPortieri(portieri);
+ 		fantaFormazione.setDifensori(difensori);
+ 		fantaFormazione.setCentrocampisti(centrocampisti);
+ 		fantaFormazione.setAttaccanti(attaccanti);
  		
     	return fantaFormazione;
     	
