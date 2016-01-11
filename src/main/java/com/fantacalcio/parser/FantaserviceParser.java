@@ -32,7 +32,7 @@ public class FantaserviceParser {
 	
 	
 	//@Scheduled(initialDelay=60000, fixedDelay=86400000)
-	@Scheduled(initialDelay=86400000, fixedDelay=86400000)
+	@Scheduled(initialDelay=60000, fixedDelay=86400000)
 	public void loadData() {
 		
 		List<Giocatore> players = giocatoreRepository.findAll();
@@ -89,33 +89,29 @@ public class FantaserviceParser {
 			log.info("Got statistics...");
 			
 			giocatore.setRuolo(statistics[15]);
-			giocatore.setPresenze(Integer.parseInt(statistics[16]));
-			giocatore.setCambio_in(Integer.parseInt(statistics[17]));
-			giocatore.setCambio_out(Integer.parseInt(statistics[18]));
-			giocatore.setGol(Integer.parseInt(statistics[19]));
-			giocatore.setAmmonizioni(Integer.parseInt(statistics[21]));
-			giocatore.setEspulsioni(Integer.parseInt(statistics[22]));
-			giocatore.setMedia_punti(new BigDecimal(Double.parseDouble(statistics[24].replace(",","."))));
+			if ( !statistics[16].equals("") ) {
+				giocatore.setPresenze(Integer.parseInt(statistics[16]));
+			}
+			if ( !statistics[17].equals("") ) {
+				giocatore.setCambio_in(Integer.parseInt(statistics[17]));
+			}
+			if ( !statistics[18].equals("") ) {
+				giocatore.setCambio_out(Integer.parseInt(statistics[18]));
+			}
+			if ( !statistics[19].equals("") ) {
+				giocatore.setGol(Integer.parseInt(statistics[19]));
+			}
+			if ( !statistics[21].equals("") ) {
+				giocatore.setAmmonizioni(Integer.parseInt(statistics[21]));
+			}
+			if ( !statistics[22].equals("") ) {
+				giocatore.setEspulsioni(Integer.parseInt(statistics[22]));
+			}
+			if ( !statistics[24].equals("") ) {
+				giocatore.setMedia_punti(new BigDecimal(Double.parseDouble(statistics[24].replace(",","."))));
+			}
+
 			giocatore.setUltima_modifica(new DateTime());
-			
-			
-/*				
-				fsm = new Fantaservice();
-				fsm.setCodice(player.getCodice());
-				fsm.setNome(player.getNomeFantaservice());
-				fsm.setNumeroMaglia(Integer.parseInt(statistics[13]));
-				fsm.setRuolo(statistics[15]);
-				fsm.setPresenze(Integer.parseInt(statistics[16]));
-				fsm.setSostitutoIn(Integer.parseInt(statistics[17]));
-				fsm.setSostitutoOut(Integer.parseInt(statistics[18]));
-				fsm.setGol(Integer.parseInt(statistics[19]));
-				fsm.setAssist(Integer.parseInt(statistics[20]));
-				fsm.setAmmonizioni(Integer.parseInt(statistics[21]));
-				fsm.setEspulsioni(Integer.parseInt(statistics[22]));
-				fsm.setDoppieAmmonizioni(Integer.parseInt(statistics[23]));
-				fsm.setFantaMedia(Double.parseDouble(statistics[24].replace(",",".")));
-				fsm.setMediaVoto(Double.parseDouble(statistics[25].replace(",",".")));
-*/
 			
 			giocatoreRepository.saveAndFlush(giocatore);
 			log.info("Giocatore " + giocatore.getCodice() + " updated)");
