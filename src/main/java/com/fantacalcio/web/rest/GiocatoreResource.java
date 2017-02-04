@@ -117,6 +117,25 @@ public class GiocatoreResource {
             .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
+    
+    /**
+     * GET  /giocatores?name=val -> get all the giocatores with name like val
+     */
+    @RequestMapping(value = "/giocatores", params = "name",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public ResponseEntity<List<Giocatore>> getAllGiocatores(@RequestParam("name") String name, Pageable pageable)
+        throws URISyntaxException {
+
+    	log.debug("REST search Giocatores with name: {}", name);
+    	
+    	Page<Giocatore> page = giocatoreRepository.searchByNameAndUserIsCurrentUser(name, pageable);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/giocatores");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    }
+    
+    
     /**
      * DELETE  /giocatores/:id -> delete the "id" giocatore.
      */

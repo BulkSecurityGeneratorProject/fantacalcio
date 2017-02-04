@@ -24,6 +24,27 @@ angular.module('fantacalcioApp')
                     }]
                 }
             })
+            .state('giocatore.search', {
+                parent: 'entity',
+                url: '/giocatores/search',
+                data: {
+                    authorities: ['ROLE_USER'],
+                    pageTitle: 'fantacalcioApp.giocatore.home.title'
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'scripts/app/entities/giocatore/giocatores.html',
+                        controller: 'GiocatoreSearchController'
+                    }
+                },
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('giocatore');
+                        $translatePartialLoader.addPart('global');
+                        return $translate.refresh();
+                    }]
+                }
+            })
             .state('giocatore.detail', {
                 parent: 'entity',
                 url: '/giocatore/{id}',

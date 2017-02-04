@@ -32,7 +32,7 @@ public class FantaserviceParser {
 	
 	
 	//@Scheduled(initialDelay=60000, fixedDelay=86400000)
-	@Scheduled(initialDelay=60000, fixedDelay=86400000)
+	@Scheduled(initialDelay=600000, fixedDelay=86400000)
 	public void loadData() {
 		
 		List<Giocatore> players = giocatoreRepository.findAll();

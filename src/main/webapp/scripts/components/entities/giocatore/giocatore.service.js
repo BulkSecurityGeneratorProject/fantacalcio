@@ -12,6 +12,9 @@ angular.module('fantacalcioApp')
                     return data;
                 }
             },
-            'update': { method:'PUT' }
+            'update': { method:'PUT' },
+            'search' : {
+            	method: 'GET', params: {name: '@searchName'}, isArray: true
+            }
         });
     });
