@@ -93,13 +93,13 @@ public class SkyFormazioniParser {
 		
 	
 		for (String titolare : titolari) {
-			log.info("TITOLARE: " + titolare );
+			//log.info("TITOLARE: " + titolare );
 		}
 		for (String panchinaro : panchina) {
-			log.info("PANCHINA: " + panchinaro );
+			//log.info("PANCHINA: " + panchinaro );
 		}
 		for (String infortunato : infortunati) {
-			log.info("INFORTUNATO: " + infortunato );
+			//log.info("INFORTUNATO: " + infortunato );
 		}
 	
 		
