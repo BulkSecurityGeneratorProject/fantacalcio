@@ -4,7 +4,7 @@ angular.module('fantacalcioApp')
     .controller('FantaFormazioneManualController', 
     		function ($scope, $rootScope, $stateParams, Giocatore, FantaFormazione) {
     	
-    	var formazioniValide = ["433","532","442","451","541","631","343"];
+    	var formazioniValide = ["433","532","442","451","541","631","343","352"];
     	
     	$scope.portieri = 0;
     	$scope.difensori = 0;
