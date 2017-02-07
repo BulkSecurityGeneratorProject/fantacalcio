@@ -17,7 +17,7 @@
             },
             "codice": "Codice",
             "nome": "Nome",
-            "nome_gazzetta": "Nome Gazzetta",
+            "nome_gazzetta": "Nome SKY",
             "ruolo": "Ruolo",
             "presenze": "Presenze",
             "cambio_in": "Cambi IN",
@@ -32,7 +32,7 @@
             "breve" : {
 	            "codice": "Codice",
 	            "nome": "Nome",
-	            "nome_gazzetta": "Gazza",
+	            "nome_gazzetta": "Nome SKY",
 	            "ruolo": "R",
 	            "presenze": "P",
 	            "cambio_in": "IN",
