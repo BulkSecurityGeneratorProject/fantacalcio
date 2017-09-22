@@ -11,7 +11,7 @@
 
     <groupId>com.fantacalcio</groupId>
     <artifactId>fantacalcio</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <packaging>war</packaging>
 
     <name>fantacalcio</name>

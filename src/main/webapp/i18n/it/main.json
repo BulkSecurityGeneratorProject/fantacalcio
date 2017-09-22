@@ -1,9 +1,9 @@
 {
     "main": {
-        "title": "Fantacalcio 2015/16!",
+        "title": "Fantacalcio 2017/18!",
         "subtitle": "Gestisci la tua rosa e genera le formazioni",
         "logged": {
-            "message": "Utente \"{{username}}\".  <br/><br/> Statistiche da <a target=\"_blank\" href=\"http://www.fantacalcioservice.it\">Fantacalcioservice</a><br/>Titolari da <a target=\"_blank\" href=\"http://sport.sky.it/calcio/serie-a/probabili-formazioni/\">sport.sky.it</a>"
+            "message": "Utente \"{{username}}\".  <br/><br/> Statistiche da <a target=\"_blank\" href=\"http://www.fanta.soccer/it/\">Fanta.Soccer</a><br/>Titolari da <a target=\"_blank\" href=\"http://sport.sky.it/calcio/serie-a/probabili-formazioni/\">sport.sky.it</a>"
         },
         "question": "Se avete domande su Fantacalcio:",
         "link": {

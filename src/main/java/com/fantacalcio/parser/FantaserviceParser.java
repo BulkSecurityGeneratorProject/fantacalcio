@@ -41,7 +41,8 @@ public class FantaserviceParser {
 			
 		
 			// http://www.fantacalcioservice.it/it/seriea/37787/calciatore/j._murillo/statistiche/
-			String url = "http://www.fantacalcioservice.it/it/seriea/" + giocatore.getCodice() +
+			// http://www.fanta.soccer/it/seriea/38270/calciatore/barba/statistiche/
+			String url = "http://www.fanta.soccer/it/seriea/" + giocatore.getCodice() +
 					"/calciatore/" + giocatore.getNome() + "/statistiche/";
 			
 			log.info("Parsing: " + url);
@@ -86,7 +87,7 @@ public class FantaserviceParser {
 				statistics[idx++] = element.text();
 			}
 			
-			log.info("Got statistics...");
+			log.info("Got statistics..." + statistics);
 			
 			giocatore.setRuolo(statistics[15]);
 			if ( !statistics[16].equals("") ) {
@@ -112,6 +113,8 @@ public class FantaserviceParser {
 			}
 
 			giocatore.setUltima_modifica(new DateTime());
+			
+			log.info("data  " + giocatore);
 			
 			giocatoreRepository.saveAndFlush(giocatore);
 			log.info("Giocatore " + giocatore.getCodice() + " updated)");

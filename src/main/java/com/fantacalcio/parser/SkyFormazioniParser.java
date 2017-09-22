@@ -35,8 +35,8 @@ public class SkyFormazioniParser {
 	@Inject
     private GiocatoreRepository giocatoreRepository;
 	
-	//@Scheduled(initialDelay=1800000, fixedDelay=3600000)
-	@Scheduled(initialDelay=120000, fixedDelay=3600000)
+	//@Scheduled(initialDelay=120000, fixedDelay=3600000)
+	@Scheduled(initialDelay=60000, fixedDelay=3600000)
 	public void loadData() throws IOException {
 		
 		// clear lists
