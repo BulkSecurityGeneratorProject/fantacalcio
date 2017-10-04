@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#      --server.address=${OPENSHIFT_DIY_IP} \
+# run the application
+
+jar=$(ls ${ARTIFACT_DIR}/*.war | head -n1)
+
+
+# Profilo PROD con parametri DB H2 nel file di conf YAML
+java -Xms384m -Xmx384m -Dfile.encoding=UTF8 \
+     -jar ${jar} \
+     --spring.profiles.active=prod \
+	 --spring.datasource.url=jdbc:h2:/data/fantacalcio/db/fantadb \
+     --server.port=8080 > /data/fantacalcio/db/fantacalcio.log
+	 
