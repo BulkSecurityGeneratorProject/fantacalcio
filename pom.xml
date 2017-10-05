@@ -733,6 +733,7 @@
                             <arguments>
                                 <argument>--spring.profiles.active=openshift</argument>
                             </arguments>
+				<finalName>${project.artifactId}</finalName>
                         </configuration>
                     </plugin>
                 </plugins>
