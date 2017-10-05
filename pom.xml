@@ -710,6 +710,12 @@
         </profile>
         <profile>
             <id>openshift</id>
+            <dependencies>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </dependency>
+            </dependencies>			
             <build>
                 <plugins>
                     <plugin>
@@ -753,6 +759,14 @@
                     <plugin>
                         <groupId>org.springframework.boot</groupId>
                         <artifactId>spring-boot-maven-plugin</artifactId>
+						   <executions>
+							  <execution>
+								<goals>
+								  <goal>repackage</goal>
+								</goals>
+								<phase>none</phase>
+							  </execution>
+							</executions>						
                         <configuration>
                             <arguments>
                                 <argument>--spring.profiles.active=openshift</argument>
