@@ -717,6 +717,7 @@
                 </dependency>
             </dependencies>			
             <build>
+				<finalName>${project.artifactId}</finalName>
                 <plugins>					
                     <plugin>
                         <groupId>org.springframework.boot</groupId>
@@ -728,12 +729,11 @@
 								</goals>
 								<phase>none</phase>
 							  </execution>
-							</executions>						
+							</executions>													
                         <configuration>
                             <arguments>
                                 <argument>--spring.profiles.active=openshift</argument>
                             </arguments>
-				<finalName>${project.artifactId}</finalName>
                         </configuration>
                     </plugin>
                 </plugins>
